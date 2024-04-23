@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Javascript</h1>
-    <script>
+    <form>
+        <label>Nome Completo</label>
+        <input type="text" name="name" id="name" value="Jorge Abreu">
+    </form>
+    <script>    
         const num1 = 2024
         const num2 = '2024'
 
@@ -29,9 +33,22 @@
             console.log('Deu ruim')
         }
 
+        //const btn = document.getElementaryById('#button')
         const button = document.querySelector('#button') //Buscando elemento com id "button" no html
         console.log(button)
 
+        const inputName = document.querySelector('#name')
+        console.log(inputName.value) //retorna o value (linha 12) do "inputName"
+        //console.log(inputName.type) //retorna o type (linha 12) do "inputName"
+
+        inputName.addEventListener('change', function()){ //Dispara um evento
+            console.log(event);
+        }
+
+        //"event.target.value" é o que mais vamos usar quando fazemos analise de input
+        //O target é o próprio elemento
+        // class usa "."
+        // id usa "#"
     </script>
 </body>
-</html>l
+</html>
